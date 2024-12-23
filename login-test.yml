@@ -1,0 +1,15 @@
+config:
+  target: 'https://checklist.pmcweb.vn/be/api/v2/tb_checklistc'
+  phases:
+    - duration: 30  # 30s
+      arrivalRate: 1000  # req/1s
+scenarios:
+  - flow:
+    - post:
+        url: '/ca/88'
+        json:
+          username: 'admin'
+          password: '123'
+        headers:
+          Content-Type: 'application/json'
+          Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7IklEX1VzZXIiOjEsIlVzZXJOYW1lIjoiYWRtaW4iLCJJRF9DaHVjdnUiOjIsIklEX0R1YW4iOjEsIlBhc3N3b3JkIjoiJDJiJDEwJDdjWWkydm5ZN3NXMWVPd09yZmlHQmViZnFvVHVVTThFZ3JwRVJOMUlJUDlnZk16M000M1ZLIiwiSURfS2hvaUNWIjpudWxsLCJFbWFpbCI6ImJxbWluaDMwQGdtYWlsLmNvbSIsImlzRGVsZXRlIjowLCJlbnRfZHVhbiI6eyJEdWFuIjoiNTcgSFRLIiwiRGlhY2hpIjoiNTcgSFRLIiwiTG9nbyI6bnVsbH0sImVudF9jaHVjdnUiOnsiQ2h1Y3Z1IjoiR2nDoW0gxJHhu5FjIGThu7Egw6FuIn19LCJpYXQiOjE3MjczMzQzMzgsImV4cCI6MTcyNzkzOTEzOH0.4vM7SydHx2soRJcrBzQFjizZ83Bmbr2UOOI6WqoxzQ4" 
